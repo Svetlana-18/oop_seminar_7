@@ -1,10 +1,10 @@
-авг. 01, 2023 6:28:50 PM ComplexNumberСalculator.myLogger log
-INFO: Первое значение калькулятора . Начало вызова метода sum с параметром (2+2i)
-авг. 01, 2023 6:28:50 PM ComplexNumberСalculator.myLogger log
-INFO: Вызова метода sum произошел
-авг. 01, 2023 6:29:02 PM ComplexNumberСalculator.myLogger log
-INFO: Первое значение калькулятора (2+2i). Начало вызова метода sum с параметром (1+1i)
-авг. 01, 2023 6:29:02 PM ComplexNumberСalculator.myLogger log
+авг. 01, 2023 6:48:14 PM ComplexNumberСalculator.myLogger log
+INFO: Первое значение калькулятора . Начало вызова метода с параметром (4+2i)
+авг. 01, 2023 6:48:14 PM ComplexNumberСalculator.myLogger log
+INFO: Вызов метода произошел
+авг. 01, 2023 6:48:22 PM ComplexNumberСalculator.myLogger log
+INFO: Первое значение калькулятора (4+2i). Начало вызова метода subtraction с параметром (2+1i)
+авг. 01, 2023 6:48:22 PM ComplexNumberСalculator.myLogger log
 INFO: Вызова метода subtraction произошел
-авг. 01, 2023 6:29:03 PM ComplexNumberСalculator.myLogger log
-INFO: Получение результата (1.0+1.0i)
+авг. 01, 2023 6:48:24 PM ComplexNumberСalculator.myLogger log
+INFO: Получение результата (2.0+1.0i)

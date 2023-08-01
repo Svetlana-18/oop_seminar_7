@@ -21,10 +21,10 @@ public class CalcDecorator implements iCalculable {
     public iCalculable sum(String arg) {
         String firstArg = oldCalc.getResult();
 
-        logger.log(String.format("Первое значение калькулятора %s. Начало вызова метода sum с параметром %s", firstArg,
+        logger.log(String.format("Первое значение калькулятора %s. Начало вызова метода с параметром %s", firstArg,
                 arg));
         iCalculable result = oldCalc.sum(arg);
-        logger.log(String.format("Вызова метода sum произошел"));
+        logger.log(String.format("Вызов метода произошел"));
 
         return result;
     }
@@ -33,7 +33,7 @@ public class CalcDecorator implements iCalculable {
     public iCalculable subtraction(String arg) {
         String firstArg = oldCalc.getResult();
 
-        logger.log(String.format("Первое значение калькулятора %s. Начало вызова метода sum с параметром %s", firstArg,
+        logger.log(String.format("Первое значение калькулятора %s. Начало вызова метода subtraction с параметром %s", firstArg,
                 arg));
         iCalculable result = oldCalc.subtraction(arg);
         logger.log(String.format("Вызова метода subtraction произошел"));
