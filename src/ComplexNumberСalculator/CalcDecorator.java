@@ -30,6 +30,18 @@ public class CalcDecorator implements iCalculable {
     }
 
     @Override
+    public iCalculable subtraction(String arg) {
+        String firstArg = oldCalc.getResult();
+
+        logger.log(String.format("Первое значение калькулятора %s. Начало вызова метода sum с параметром %s", firstArg,
+                arg));
+        iCalculable result = oldCalc.subtraction(arg);
+        logger.log(String.format("Вызова метода subtraction произошел"));
+
+        return result;
+    }
+
+    @Override
     public iCalculable multi(String arg) {
         String firstArg = oldCalc.getResult();
         logger.log(String.format("Первое значение калькулятора %s. Начало вызова метода multi с параметром %s",

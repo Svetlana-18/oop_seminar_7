@@ -32,6 +32,22 @@ public final class Calculator implements iCalculable {
     }
 
     @Override
+    public iCalculable subtraction(String arg) {
+
+        primaryArg += (primaryArg.length() > 0 ? "+" + arg : arg);
+        getTerms(primaryArg);
+        // пока terms не наберет нужное кол-во элемтов пропускаем вычисление
+        if (terms.size() == 4) {
+            double a = Math.round((Double.valueOf(this.terms.get(0)) - Double.valueOf(this.terms.get(2))) * 100.0)
+                    / 100.0;
+            double bi = Math.round((Double.valueOf(this.terms.get(1))
+                    - Double.valueOf(this.terms.get(3))) * 100.0) / 100.0;
+            primaryArg = "(" + String.valueOf(a) + (bi >= 0 ? "+" + String.valueOf(bi) : String.valueOf(bi)) + "i)";
+        }
+        return this;
+    }
+
+    @Override
     public iCalculable multi(String arg) {
         primaryArg += (primaryArg.length() > 0 ? "*" + arg : arg);
         getTerms(primaryArg);
@@ -76,7 +92,7 @@ public final class Calculator implements iCalculable {
     }
 
     // разделяем уравнение на отдельные части
-    
+
     private List<String> getTerms(String string) {
         String regex = "[+-]?([0-9]*[.])?[0-9]+";
         Pattern pattern = Pattern.compile(regex, Pattern.MULTILINE);
@@ -90,3 +106,5 @@ public final class Calculator implements iCalculable {
         return terms;
     }
 }
+
+

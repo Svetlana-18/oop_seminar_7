@@ -7,6 +7,8 @@ public interface iCalculable {
 
     iCalculable divis(String arg);
 
+    iCalculable subtraction(String arg);
+
     String getResult();
 
 }

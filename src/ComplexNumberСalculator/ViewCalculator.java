@@ -15,7 +15,7 @@ public class ViewCalculator {
             calculator.sum(primaryArg);
             // iCalculable calculator = calculableFactory.create(primaryArg);
             while (true) {
-                String cmd = prompt("Введите команду (*, +, /, =) : ");
+                String cmd = prompt("Введите команду (*, +, /, =, -) : ");
                 if (cmd.equals("*")) {
                     String arg = promptStr("Введите второе комплексное число в скобках (a2+b2i): ");
                     calculator.multi(arg);
@@ -31,6 +31,12 @@ public class ViewCalculator {
                     String arg = promptStr(
                             "Введите второе комплексное число \u0432 \u0441\u043A\u043E\u0431\u043A\u0430\u0445 (a2+b2i): ");
                     calculator.divis(arg);
+                    continue;
+                }
+                if (cmd.equals("-")) {
+                    String arg = promptStr(
+                            "Введите второе комплексное число \u0432 \u0441\u043A\u043E\u0431\u043A\u0430\u0445 (a2+b2i): ");
+                    calculator.subtraction(arg);
                     continue;
                 }
                 if (cmd.equals("=")) {
